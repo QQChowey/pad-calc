@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
+import Card from './components/card'
 
 const MyContext = React.createContext()
-
 class MyProvider extends Component {
     state = {
-        text: "Hello World!"
+
     }
     render() {
         return (
@@ -19,12 +19,10 @@ function App() {
   return (
     <MyProvider>
         <div>
-            <MyContext.Consumer>
-                {(context) => (context.state.text)}
-            </MyContext.Consumer>
+            <Card />
+            <Card id="1" />
         </div>
     </MyProvider>
-
   )
 }
 

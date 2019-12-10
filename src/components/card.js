@@ -1,8 +1,8 @@
 import React from "react"
 
-function Card(props) {
+function Card({id}) {
     let url
-    (!props.id) ? url = "https://via.placeholder.com/100" : url = "https://raw.githubusercontent.com/QQChowey/PDC/master/images/portrait/" + props.id + ".png"
+    (!id) ? url = "https://via.placeholder.com/100" : url = "https://raw.githubusercontent.com/QQChowey/PDC/master/images/portrait/" + id + ".png"
 
     return (
         <img src={url} />

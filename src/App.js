@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Card from './components/card'
+import TeamTable from './components/teamTable'
 
 const MyContext = React.createContext()
 class MyProvider extends Component {
@@ -19,8 +19,7 @@ function App() {
   return (
     <MyProvider>
         <div>
-            <Card />
-            <Card id="1" />
+            <TeamTable id={["0", "0", "0", "0", "0", "0"]}/>
         </div>
     </MyProvider>
   )

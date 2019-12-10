@@ -18,9 +18,12 @@ class MyProvider extends Component {
 function App() {
   return (
     <MyProvider>
-        <div>
-            <TeamTable id={["0", "0", "0", "0", "0", "0"]}/>
-        </div>
+        <React.Fragment>
+            <div>
+                <TeamTable id={["0", "0", "0", "0", "0", "0"]}/>
+            </div>
+
+        </React.Fragment>
     </MyProvider>
   )
 }

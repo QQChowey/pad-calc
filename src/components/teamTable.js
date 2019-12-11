@@ -2,31 +2,38 @@ import React from "react"
 import Card from "./card"
 
 function TeamTable({id}) {
-    const styleContainer = {
-        // backgroundColor: "pink",
+    const styleFlex = {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-around",
+    }
+
+    const styleContainer = {
         maxWidth: "600px",
     }
 
     const styleInnerContainer = {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-around",
         //padding: "10px",
+    }
+
+    const styleCard = {
+        margin: "2px",
     }
 
     return (
         <div style={styleContainer}>
-            <Card id={id[0]} />
+            <div>
+                <Card id={id[0]} />
+            </div>
             <div style={styleInnerContainer}>
                 <Card id={id[1]} />
                 <Card id={id[2]} />
                 <Card id={id[3]} />
                 <Card id={id[4]} />
             </div>
-            <Card id={id[5]} />
+            <div>
+                <Card id={id[5]} />
+            </div>
         </div>
     )
 }

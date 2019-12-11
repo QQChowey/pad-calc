@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import TeamTable from './components/teamTable'
+import Layout from './components/layout'
 
 const MyContext = React.createContext()
 class MyProvider extends Component {
@@ -18,12 +18,7 @@ class MyProvider extends Component {
 function App() {
   return (
     <MyProvider>
-        <React.Fragment>
-            <div>
-                <TeamTable id={["0", "0", "0", "0", "0", "0"]}/>
-            </div>
-
-        </React.Fragment>
+        <Layout />
     </MyProvider>
   )
 }

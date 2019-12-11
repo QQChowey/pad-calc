@@ -1,12 +1,6 @@
 import React from "react"
 
 function Card({id}) {
-    const styleContainer = {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-around",
-        margin: "2px",
-    }
 
     const styleImage = {
         width: "100%",
@@ -24,10 +18,7 @@ function Card({id}) {
     }
 
     return (
-        <div style={styleContainer}>
-            <img style={styleImage} src={url} alt={id}/>
-        </div>
-
+        <img style={styleImage} src={url} alt={id}/>
     )
 }
 

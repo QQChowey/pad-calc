@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Sidenav from "./sidenav"
+import Toolbar from "./toolbar/toolbar"
 
 class Layout extends Component {
     construtor() {
@@ -8,9 +8,21 @@ class Layout extends Component {
 
     render() {
         return (
-            <React.Fragment>
-                <Sidenav />
-            </React.Fragment>
+            <div style={
+                    {
+                        backgroundColor: "#353941",
+                        width: "100%",
+                        height: "100%",
+                        position: "fixed",
+                        top: 0,
+                        left: 0,
+                    }
+                }>
+                <Toolbar />
+                <main style={{marginTop: '63px'}}>
+                    <p>Hello World!</p>
+                </main>
+            </div>
 
 
         )

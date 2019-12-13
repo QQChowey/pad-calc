@@ -2,9 +2,9 @@ import React from 'react';
 import cx from 'classnames';
 import styles from './sidebar.module.css'
 
-const SideBar = props => {
+const SideBar = ({show}) => {
     let styleSideBar = styles.sideBar
-    if (props.show) {
+    if (show) {
         styleSideBar = cx(styles.sideBar, styles.open)
     }
 

@@ -26,7 +26,7 @@ class Layout extends Component {
         let backdrop;
 
         if (this.state.sideBarOpen) {
-            backdrop = <Backdrop backdropClickHandler={this.backdropClickHandler} />
+            backdrop = <Backdrop click={this.backdropClickHandler} />
         }
 
         return (

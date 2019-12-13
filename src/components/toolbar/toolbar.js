@@ -6,7 +6,7 @@ const Toolbar = ({sideToggleClickHandler}) => (
     <header className="toolbar">
         <nav className="toolbar__navigation">
             <div>
-                <ToggleButton sideToggleClickHandler={sideToggleClickHandler}/>
+                <ToggleButton click={sideToggleClickHandler}/>
             </div>
             <div className="toolbar__logo">
                 Valeria

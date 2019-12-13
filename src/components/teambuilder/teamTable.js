@@ -1,7 +1,7 @@
 import React from "react"
 import Card from "./card"
 
-function TeamTable({id}) {
+const TeamTable = ({id}) => {
     const styleFlex = {
         display: "flex",
         alignItems: "center",

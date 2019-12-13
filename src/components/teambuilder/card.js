@@ -1,6 +1,6 @@
 import React from "react"
 
-function Card({id}) {
+const Card = ({id}) => {
 
     const styleImage = {
         width: "100%",

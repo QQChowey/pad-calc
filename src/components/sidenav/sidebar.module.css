@@ -1,0 +1,41 @@
+.sideBar {
+    height: 100%;
+    background: #26282B;
+    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40%;
+    min-width: 200px;
+    max-width: 400px;
+    z-index: 20;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+}
+
+.sideBar.open {
+    transform: translateX(0);
+}
+
+.sideBar ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sideBar li {
+    margin: 0.5rem 0;
+}
+
+.sideBar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.sideBar a:hover,
+.sideBar a:active {
+    color: #5F85DB;
+}

@@ -2,7 +2,10 @@ import React from 'react';
 import styles from './toggleButton.module.css'
 
 const ToggleButton = props => (
-    <button className={styles.toggleButton}>
+    <button
+        className={styles.toggleButton}
+        onClick={props.sideToggleClickHandler}
+    >
         <div className={styles.toggleButton__line} />
         <div className={styles.toggleButton__line} />
         <div className={styles.toggleButton__line} />

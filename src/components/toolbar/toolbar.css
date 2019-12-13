@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 .toolbar {
-    position: fixed;
+    /* position: fixed;
     top: 0;
-    left: 0;
+    left: 0; */
     width: 100%;
-    height: 56px;
+    height: 42px;
     background: #26282B;
 }
 

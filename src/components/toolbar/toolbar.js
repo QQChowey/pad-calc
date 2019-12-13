@@ -2,11 +2,11 @@ import React from "react"
 import './toolbar.css'
 import ToggleButton from '../sidenav/toggleButton'
 
-const Toolbar = props => (
+const Toolbar = ({sideToggleClickHandler}) => (
     <header className="toolbar">
         <nav className="toolbar__navigation">
             <div>
-                <ToggleButton />
+                <ToggleButton sideToggleClickHandler={sideToggleClickHandler}/>
             </div>
             <div className="toolbar__logo">
                 Valeria

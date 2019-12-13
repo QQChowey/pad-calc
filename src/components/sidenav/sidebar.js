@@ -17,6 +17,9 @@ const SideBar = ({show}) => {
                 <li>
                     <a href="/">Calculator</a>
                 </li>
+                <li>
+                    <a href="/">Exports</a>
+                </li>
 
             </ul>
         </nav>

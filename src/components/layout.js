@@ -9,6 +9,7 @@ class Layout extends Component {
 
         this.state = {
             sideBarOpen: false,
+            mainLayout: "team-builder",
         }
     }
 
@@ -20,6 +21,10 @@ class Layout extends Component {
 
     backdropClickHandler = () => {
         this.setState({sideBarOpen: false})
+    }
+
+    aSideBarClickHandler = () => {
+        
     }
 
     render() {

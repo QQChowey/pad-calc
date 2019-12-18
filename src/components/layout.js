@@ -25,7 +25,6 @@ class Layout extends Component {
 
     sideBarClickHandler = (e) => {
         this.setState({mainLayout: e})
-        console.log(this.state.mainLayout)
         this.setState({sideBarOpen: false})
     }
 

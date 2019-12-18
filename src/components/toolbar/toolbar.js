@@ -1,26 +1,32 @@
 import React from "react"
-import './toolbar.css'
+import styles from './toolbar.module.css'
 import ToggleButton from '../sidenav/toggleButton'
 
 const Toolbar = ({sideToggleClickHandler}) => (
-    <header className="toolbar">
-        <nav className="toolbar__navigation">
+    <header className={styles.header}>
+        <nav className={styles.nav}>
             <div>
                 <ToggleButton click={sideToggleClickHandler}/>
             </div>
-            <div className="toolbar__logo">
+            <div className={styles.logo}>
                 Valeria
             </div>
-            <div className="spacer" />
-            <div className="toolbar__navigation-items">
-                <ul>
-                    <li>
-                        <div onClick={() => console.log("Help")}>
+            <div className={styles.spacer} />
+            <div className={styles.items}>
+                <ul className={styles.ul}>
+                    <li className={styles.li}>
+                        <div
+                            className={styles.div}
+                            onClick={() => console.log("Help")}
+                        >
                             <i className="material-icons">help_outline</i>
                         </div>
                     </li>
-                    <li>
-                        <div onClick={() => console.log("Settings")}>
+                    <li className={styles.li}>
+                        <div
+                            className={styles.div}
+                            onClick={() => console.log("Settings")}
+                        >
                             <i className="material-icons">settings</i>
                         </div>
                     </li>

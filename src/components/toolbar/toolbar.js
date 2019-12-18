@@ -15,14 +15,14 @@ const Toolbar = ({sideToggleClickHandler}) => (
             <div className="toolbar__navigation-items">
                 <ul>
                     <li>
-                        <a href="/">
+                        <div onClick={() => console.log("Help")}>
                             <i className="material-icons">help_outline</i>
-                        </a>
+                        </div>
                     </li>
                     <li>
-                        <a href="/">
+                        <div onClick={() => console.log("Settings")}>
                             <i className="material-icons">settings</i>
-                        </a>
+                        </div>
                     </li>
                 </ul>
             </div>

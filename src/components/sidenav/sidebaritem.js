@@ -1,9 +1,19 @@
 import React from 'react'
+import cx from 'classnames'
+import styles from './sidebaritem.module.css'
 
-const SideBarItem = () => {
+const SideBarItem = ({click, id, selected, text}) => {
+
+    let styleLi = styles.li
+    let styleDiv = styles.div
+    if (selected) {
+        styleLi = cx(styles.li, styles.selected)
+        styleDiv = cx(styles.div, styles.selected)
+    }
+
     return (
-        <li className={styles.li}>
-            <div className={styles.div}>Team Builder</div>
+        <li className={styleLi} onClick={!selected ? (() => click(id)) : null}>
+            <div className={styleDiv}>{text}</div>
         </li>
     )
 }

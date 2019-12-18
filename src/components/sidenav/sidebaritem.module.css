@@ -1,0 +1,34 @@
+.li {
+    /* margin: 0.25rem 0rem; */
+}
+
+.li.selected {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.li:hover,
+.li:active {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* .vl {
+    margin-left: 0.5rem;
+    border-right: 1px solid #5F85DB;
+    height: 75%;
+} */
+
+.div {
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.div.selected {
+    color: #5F85DB;
+}
+
+.div:hover,
+.div:active {
+    color: #5F85DB;
+}

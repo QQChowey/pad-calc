@@ -23,24 +23,40 @@ class Layout extends Component {
         this.setState({sideBarOpen: false})
     }
 
-    aSideBarClickHandler = () => {
-        
+    sideBarClickHandler = (e) => {
+        this.setState({mainLayout: e})
+        console.log(this.state.mainLayout)
+        this.setState({sideBarOpen: false})
     }
 
     render() {
-        let backdrop;
-
+        let backdrop
         if (this.state.sideBarOpen) {
             backdrop = <Backdrop click={this.backdropClickHandler} />
+        }
+
+        let main
+        if (this.state.mainLayout === "team-builder"){
+            main = "Team Builder"
+        }
+        else if (this.state.mainLayout === "calculator"){
+            main = "Calculator"
+        }
+        else if (this.state.mainLayout === "exports"){
+            main = "Exports"
         }
 
         return (
             <div style={{height: "100%"}}>
                 <Toolbar sideToggleClickHandler={this.sideToggleClickHandler} />
-                <SideBar show={this.state.sideBarOpen}/>
+                <SideBar
+                    show={this.state.sideBarOpen}
+                    selected={this.state.mainLayout}
+                    sideBarClickHandler={this.sideBarClickHandler}
+                />
                 {backdrop}
                 <main>
-                    <p>Hello World!</p>
+                    <div>{main}</div>
                 </main>
             </div>
         )

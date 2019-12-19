@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Backdrop from './sidenav/backdrop'
 import SideBar from './sidenav/sidebar'
 import styles from './layout.module.css'
-import TeamBuilder from './teambuilder/teambuilder'
+// import TeamBuilder from './teambuilder/teambuilder'
 import Toolbar from './toolbar/toolbar'
 
 class Layout extends Component {
@@ -38,7 +38,7 @@ class Layout extends Component {
 
         let main
         if (this.state.mainLayout === "team-builder"){
-            main = <TeamBuilder />
+            main = "Team Builder"
         }
         else if (this.state.mainLayout === "calculator"){
             main = "Calculator"

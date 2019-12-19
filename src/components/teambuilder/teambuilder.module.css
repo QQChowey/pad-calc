@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+
+.box {
+    display:flex;
+    height: 25%;
+    width: 90%;
+    background-color: #26282B;
+}

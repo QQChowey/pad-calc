@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import SideBar from './sidenav/sidebar'
-import Toolbar from './toolbar/toolbar'
 import Backdrop from './sidenav/backdrop'
+import SideBar from './sidenav/sidebar'
+import styles from './layout.module.css'
+import TeamBuilder from './teambuilder/teambuilder'
+import Toolbar from './toolbar/toolbar'
 
 class Layout extends Component {
     constructor(props) {
@@ -36,7 +38,7 @@ class Layout extends Component {
 
         let main
         if (this.state.mainLayout === "team-builder"){
-            main = "Team Builder"
+            main = <TeamBuilder />
         }
         else if (this.state.mainLayout === "calculator"){
             main = "Calculator"
@@ -46,16 +48,18 @@ class Layout extends Component {
         }
 
         return (
-            <div style={{height: "100%"}}>
-                <Toolbar sideToggleClickHandler={this.sideToggleClickHandler} />
+            <div className={styles.div}>
+                <Toolbar
+                    sideToggleClickHandler={this.sideToggleClickHandler}
+                />
                 <SideBar
                     show={this.state.sideBarOpen}
                     selected={this.state.mainLayout}
                     sideBarClickHandler={this.sideBarClickHandler}
                 />
                 {backdrop}
-                <main>
-                    <div>{main}</div>
+                <main className={styles.main}>
+                    {main}
                 </main>
             </div>
         )

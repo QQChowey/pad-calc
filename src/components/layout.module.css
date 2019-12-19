@@ -1,0 +1,10 @@
+.div {
+    height: 100%;
+}
+
+.main {
+    position: fixed;
+    top: 42px;
+    height: calc(100% - 42px);
+    width: 100%;
+}

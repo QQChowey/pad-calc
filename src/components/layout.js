@@ -36,19 +36,20 @@ class Layout extends Component {
             backdrop = <Backdrop click={this.backdropClickHandler} />
         }
 
+        const load = [<TeamBuilder />, "Calculator", "Exports"]
         let main
         if (this.state.mainLayout === "team-builder"){
-            main = <TeamBuilder />
+            main = load[0]
         }
         else if (this.state.mainLayout === "calculator"){
-            main = "Calculator"
+            main = load[1]
         }
         else if (this.state.mainLayout === "exports"){
-            main = "Exports"
+            main = load[2]
         }
 
         return (
-            <div className={styles.div}>
+            <div className={styles.div}> 
                 <Toolbar
                     sideToggleClickHandler={this.sideToggleClickHandler}
                 />

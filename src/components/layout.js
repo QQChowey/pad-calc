@@ -10,51 +10,62 @@ class Layout extends Component {
         super(props)
 
         this.state = {
-            sideBarOpen: false,
             mainLayout: "team-builder",
+            sidenav_sideBarOpen: false,
+            //teambuilder state
+            teambuilder_mode: "1P",
+
         }
     }
 
+    //sidenav handlers
     sideToggleClickHandler = () => {
         this.setState((prevState) => {
-            return {sideBarOpen: !prevState.sideBarOpen}
+            return {sidenav_sideBarOpen: !prevState.sidenav_sideBarOpen}
         });
     }
 
     backdropClickHandler = () => {
-        this.setState({sideBarOpen: false})
+        this.setState({sidenav_sideBarOpen: false})
     }
 
     sideBarClickHandler = (e) => {
         this.setState({mainLayout: e})
-        this.setState({sideBarOpen: false})
+        this.setState({sidenav_sideBarOpen: false})
+    }
+
+    //teambuilder handlers
+    dropdownChangeHandler = (e) => {
+        this.setState({teambuilder_mode: e.target.value})
     }
 
     render() {
         let backdrop
-        if (this.state.sideBarOpen) {
+        if (this.state.sidenav_sideBarOpen) {
             backdrop = <Backdrop click={this.backdropClickHandler} />
         }
 
-        const load = [<TeamBuilder />, "Calculator", "Exports"]
         let main
         if (this.state.mainLayout === "team-builder"){
-            main = load[0]
+            main = <TeamBuilder
+                mode={this.state.teambuilder_mode}
+                dropdownChangeHandler={this.dropdownChangeHandler}
+            />
         }
         else if (this.state.mainLayout === "calculator"){
-            main = load[1]
+            main = "Calculator"
         }
         else if (this.state.mainLayout === "exports"){
-            main = load[2]
+            main = "Exports"
         }
 
         return (
-            <div className={styles.div}> 
+            <div className={styles.div}>
                 <Toolbar
                     sideToggleClickHandler={this.sideToggleClickHandler}
                 />
                 <SideBar
-                    show={this.state.sideBarOpen}
+                    show={this.state.sidenav_sideBarOpen}
                     selected={this.state.mainLayout}
                     sideBarClickHandler={this.sideBarClickHandler}
                 />

@@ -1,15 +1,38 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Dropdown from './dropdown'
 import styles from './teambuilder.module.css'
 import TeamTable from './teamtable'
 
 const TeamBuilder = ({mode, dropdownChangeHandler}) => {
     let main
-    // if (mode = "1P") {
-    //
-    // }
-    // if (mode = "2P")
-    // if (mode = "3P")
+    if (mode === "1P") {
+        main = (
+            <React.Fragment>
+                <TeamTable />
+            </React.Fragment>
+        )
+    }
+    else if (mode === "2P") {
+        main = (
+            <React.Fragment>
+                <TeamTable />
+                <div className={styles.spacer} />
+                <TeamTable />
+            </React.Fragment>
+        )
+    }
+    else if (mode === "3P") {
+        main = (
+            <React.Fragment>
+                <TeamTable />
+                <div className={styles.spacer} />
+                <TeamTable />
+                <div className={styles.spacer} />
+                <TeamTable />
+            </React.Fragment>
+        )
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.select}>
@@ -20,12 +43,7 @@ const TeamBuilder = ({mode, dropdownChangeHandler}) => {
                 />
             </div>
             <div className={styles.wrapper}>
-                <TeamTable />
-                <div className={styles.spacer} />
-                <TeamTable />
-                <div className={styles.spacer} />
-                <TeamTable />
-                <div className={styles.spacer} />
+                {main}
             </div>
         </div>
     )
